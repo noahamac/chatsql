@@ -10,7 +10,9 @@ datagroup: bluesky_default_datagroup {
 
 persist_with: bluesky_default_datagroup
 
-# explore: candidates {}
+explore: bluesky {
+  from: tc1
+}
 
 # explore: committees {}
 
@@ -19,4 +21,3 @@ persist_with: bluesky_default_datagroup
 # explore: general {}
 
 # explore: primary {}
-

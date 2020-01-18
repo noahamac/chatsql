@@ -1,9 +1,18 @@
 view: tc1 {
   sql_table_name: chat.tc1 ;;
 
-  dimension: date {
-    type: string
-    sql: ${TABLE}.Date ;;
+  dimension_group: created_at {
+    type: time
+    timeframes: [
+      raw,
+      date,
+      week,
+      month,
+      month_num,
+      quarter,
+      year
+    ]
+    sql: STR_TO_DATE(${TABLE}.Date) ;;
   }
 
   dimension: note {
